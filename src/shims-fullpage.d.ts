@@ -1,1 +1,1 @@
-declare module "v-fullpage";
+declare module "vue-fullpage.js";

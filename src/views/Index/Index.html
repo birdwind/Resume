@@ -1,31 +1,56 @@
 <v-app>
-<!-- <el-main style="height: calc(100vh - 37px);">-->
-    <el-main>
-        <!--        <router-view style="min-height: calc(100% - 78px); " ></router-view>-->
-        <!--        <div class="copyrights">-->
-        <!--            <div class="text">-->
-        <!--                {{ copyRight }}-->
-        <!--            </div>-->
-        <!--        </div>-->
-        <v-fullpage>
-            <div slot="section"></div>
-            <div slot="section"></div>
-        </v-fullpage>
-
-<!--        <div class="fullpage-container">-->
-<!--            <div class="fullpage-wp" v-fullpage="opts">-->
-<!--                <div class="page-1 page">-->
-<!--                    <p class="part-1" v-animate="{value: 'bounceInLeft'}">vue-fullpage1</p>-->
-<!--                </div>-->
-<!--                <div class="page-2 page">-->
-<!--                    <p class="part-2" v-animate="{value: 'bounceInRight'}">vue-fullpage2</p>-->
-<!--                </div>-->
-<!--                <div class="page-3 page">-->
-<!--                    <p class="part-3" v-animate="{value: 'bounceInLeft', delay: 0}">vue-fullpage3</p>-->
-<!--                    <p class="part-3" v-animate="{value: 'bounceInRight', delay: 600}">vue-fullpage4</p>-->
-<!--                    <p class="part-3" v-animate="{value: 'zoomInDown', delay: 1200}">vue-fullpage5</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-    </el-main>
+    <v-app-bar app
+               short
+               clipped-left
+               hide-on-scroll
+               color="#2a2d31">
+        <v-tabs fixed-tabs
+                align-with-title
+                v-model="currentTab"
+                :show-arrows="true">
+            <v-tab>
+                <i class="pmc-icon pmc-dashboard"></i>
+                系統儀表板
+            </v-tab>
+            <v-tab>
+                <i class="pmc-icon pmc-progress"></i>
+                生產進度看板
+            </v-tab>
+            <v-tab>
+                <i class="pmc-icon pmc-workpiece"></i>
+                工件管理
+            </v-tab>
+            <v-tab>
+                <i class="pmc-icon pmc-workorder"></i>
+                工單管理
+            </v-tab>
+            <v-tab>
+                <i class="pmc-icon pmc-schedule"></i>
+                智慧排程
+            </v-tab>
+            <v-tab>
+                <i class="pmc-icon pmc-checkin"></i>
+                報工
+            </v-tab>
+            <v-tab>
+                <i class="pmc-icon pmc-setting"></i>
+                系統設定
+            </v-tab>
+        </v-tabs>
+        <template v-slot:extension>
+        </template>
+    </v-app-bar>
+    <v-main>
+        <v-container>
+            <full-page ref="fullpage" :options="options" id="fullpage">
+                <div class="section">
+                    First section ...
+                </div>
+                <div class="section">
+                    Second section ...
+                </div>
+                <div class="section footerH"></div>
+            </full-page>
+        </v-container>
+    </v-main>
 </v-app>
