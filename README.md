@@ -1,4 +1,4 @@
-# resume-vue2
+# resume
 
 ## Project setup
 ```
