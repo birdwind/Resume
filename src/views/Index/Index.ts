@@ -6,9 +6,13 @@ import { BaseVue } from "@/base/view/BaseVue";
 })
 export default class Index extends BaseVue {
   copyRight = process.env.VUE_APP_CopyRight;
-  workId = "";
+  opts = {
+    start: 0,
+    dir: "v",
+    duration: 500,
+    beforeChange: (prev: any, next: any) => {},
+    afterChange: (prev: any, next: any) => {},
+  };
 
-  mounted() {
-    this.workId = this.$route.params.workId;
-  }
+  mounted() {}
 }

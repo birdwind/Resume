@@ -1,5 +1,5 @@
 import Vue from "vue";
-import { configElementUi, configErrorHandler, configRightMouseMenu, vuetify } from "@/base/config";
+import { configAnimate, configElementUi, configErrorHandler, configFullPage, vuetify } from "@/base/config";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
@@ -8,7 +8,8 @@ Vue.config.productionTip = false;
 
 configErrorHandler();
 configElementUi();
-configRightMouseMenu();
+configFullPage();
+configAnimate();
 
 new Vue({
   router,

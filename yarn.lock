@@ -4549,6 +4549,11 @@ fstream@^1.0.0, fstream@^1.0.12:
     mkdirp ">=0.5 0"
     rimraf "2"
 
+fullpage.js@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/fullpage.js/-/fullpage.js-3.1.2.tgz#ee6289f52edb2a9f9c25d09c4022043b701d3cc0"
+  integrity sha512-hv7z6xhbg2StTp1UDq2hi+0oHjhT7cW3zCL3qCIJ3ood5pN0FRBQ2YKIOUobhsp4ATSQlr6sZ2TOcS+Ha+T7Cg==
+
 function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
@@ -8236,6 +8241,11 @@ schema-utils@^3.0.0:
     ajv "^6.12.5"
     ajv-keywords "^3.5.2"
 
+scrollmonitor@^1.2.4:
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/scrollmonitor/-/scrollmonitor-1.2.8.tgz#1a581069d1df9449b312f1d197081cb53320bc20"
+  integrity sha512-hp/GWKUm5Wzcy6oROA6dfApzdfSs4pWiMEfWw7jpb0Hf6lkjBP8ZBfZd/JApICXWXPgqmD1jei7BP40eJ2+MiQ==
+
 scss-tokenizer@^0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/scss-tokenizer/-/scss-tokenizer-0.2.3.tgz#8eb06db9a9723333824d3f5530641149847ce5d1"
@@ -9478,6 +9488,13 @@ uuid@^8.3.2:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
+
+v-animate-css@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/v-animate-css/-/v-animate-css-0.0.5.tgz#ff5895abd450c7710baa13bbb962b00920f87fef"
+  integrity sha512-FML26yVYX3hCTWTKioTNAIXjaWIFWa1mSczb92cLkMYI9QI6uRacKx7QnBNB17IOFLFEv8mc14aawe2In/ba1w==
+  dependencies:
+    scrollmonitor "^1.2.4"
 
 v8-compile-cache@^2.0.3:
   version "2.3.0"
