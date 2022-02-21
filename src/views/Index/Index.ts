@@ -1,11 +1,20 @@
 import Component from "vue-class-component";
 import { BaseVue } from "@/base/view/BaseVue";
+import About from "@/views/About/About.vue";
+import { MyLogger } from "@/base/utils/MyLogger";
+import { Watch } from "vue-property-decorator";
 
 @Component({
-  components: {},
+  components: {
+    About,
+  },
 })
 export default class Index extends BaseVue {
+  $refs!: {
+    fullpage: any;
+  };
   currentTab = 0;
+  screenWidth = 0;
 
   copyRight = process.env.VUE_APP_CopyRight;
   options = {
@@ -16,9 +25,35 @@ export default class Index extends BaseVue {
     loopHorizontal: true, // slide幻燈片是否循環滾動
     scrollBar: true, // true則是一滾動就是一整屏
     onLeave: this.onLeaveFullPage, // 滾動前的回調函數，
+    menu: ".nav",
+    anchors: ["About", "Portfolio", "Resume", "Contact"],
+    responsiveWidth: 960,
   };
 
-  mounted() {}
+  created() {
+    this.screenWidth = window.screen.width;
+    window.addEventListener("resize", this.windowResizeHandler);
+  }
+
+  destroyed() {
+    window.removeEventListener("resize", this.windowResizeHandler);
+  }
+
+  private windowResizeHandler(): void {
+    this.screenWidth = window.screen.width;
+    // MyLogger.log(window.screen.width);
+    // MyLogger.log(window.screen.height);
+  }
+
+  // @Watch("screenWidth")
+  // watchScreenWidth(val: number) {
+  //   MyLogger.log(this.$refs.fullpage.api);
+  //   if (val > 960) {
+  //     this.$refs.fullpage.api.setAllowScrolling(true);
+  //   } else {
+  //     this.$refs.fullpage.api.setAllowScrolling(false);
+  //   }
+  // }
 
   afterLoadFullPage() {}
 

@@ -6,7 +6,7 @@ import { Getter } from "vuex-class";
 import Unauthorized from "@/components/Unauthorized.vue";
 
 @Component
-export class AuthGuard extends Vue {
+export class Authority extends Vue {
   @Getter(`Auth/isLogin`)
   private readonly isLogin!: boolean;
 

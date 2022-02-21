@@ -1,50 +1,81 @@
-<v-app>
+<v-app class="index">
     <v-app-bar app
                short
-               clipped-left
+               clipped-right
                hide-on-scroll
-               color="#2a2d31">
-        <v-tabs fixed-tabs
-                align-with-title
-                v-model="currentTab"
-                :show-arrows="true">
-            <v-tab>
-                <i class="pmc-icon pmc-dashboard"></i>
-                系統儀表板
-            </v-tab>
-            <v-tab>
-                <i class="pmc-icon pmc-progress"></i>
-                生產進度看板
-            </v-tab>
-            <v-tab>
-                <i class="pmc-icon pmc-workpiece"></i>
-                工件管理
-            </v-tab>
-            <v-tab>
-                <i class="pmc-icon pmc-workorder"></i>
-                工單管理
-            </v-tab>
-            <v-tab>
-                <i class="pmc-icon pmc-schedule"></i>
-                智慧排程
-            </v-tab>
-            <v-tab>
-                <i class="pmc-icon pmc-checkin"></i>
-                報工
-            </v-tab>
-            <v-tab>
-                <i class="pmc-icon pmc-setting"></i>
-                系統設定
-            </v-tab>
-        </v-tabs>
-        <template v-slot:extension>
-        </template>
+               flat
+               prominent
+               color="transparent">
+        <v-row>
+            <v-col>
+                <div class="resume-toolbar-title">
+                    PHIL TSAI
+                </div>
+            </v-col>
+            <v-col>
+                <v-tabs align-with-title
+                        background-color="transparent"
+                        color="white"
+                        show-arrows
+                        hide-slider
+                        right
+                        v-model="currentTab"
+                        class="resume-tabs nav">
+                    <v-tab data-menuanchor="About">
+                        <div class="resume-tab-items">
+                            <div>關於我</div>
+                            <div>ABOUT</div>
+                        </div>
+                    </v-tab>
+                    <v-tab data-menuanchor="Portfolio">
+                        <div class="resume-tab-items">
+                            <div>作品集</div>
+                            <div>PORTFOLIO</div>
+                        </div>
+                    </v-tab>
+                    <v-tab data-menuanchor="Resume">
+                        <div class="resume-tab-items">
+                            <div>履歷</div>
+                            <div>RESUME</div>
+                        </div>
+                    </v-tab>
+                    <v-tab data-menuanchor="Contact">
+                        <div class="resume-tab-items">
+                            <div>聯絡我</div>
+                            <div>CONTACT</div>
+                        </div>
+                    </v-tab>
+                </v-tabs>
+            </v-col>
+<!--            <v-col>-->
+<!--                -->
+<!--            </v-col>-->
+        </v-row>
     </v-app-bar>
+    <div class="triangle"></div>
+    <div class="nav nav-menu">
+        <div class="nav-item" data-menuanchor="About">
+            <i class="resume-icon icon-circle"></i>
+            <span>關於我</span>
+        </div>
+        <div class="nav-item" data-menuanchor="Portfolio">
+            <i class="resume-icon icon-circle"></i>
+            <span>作品集</span>
+        </div>
+        <div class="nav-item" data-menuanchor="Resume">
+            <i class="resume-icon icon-circle"></i>
+            <span>履歷</span>
+        </div>
+        <div class="nav-item" data-menuanchor="Contact">
+            <i class="resume-icon icon-circle"></i>
+            <span>聯絡我</span>
+        </div>
+    </div>
     <v-main>
         <v-container>
             <full-page ref="fullpage" :options="options" id="fullpage">
                 <div class="section">
-                    First section ...
+                    <About></About>
                 </div>
                 <div class="section">
                     Second section ...

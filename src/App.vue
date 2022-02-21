@@ -1,8 +1,8 @@
 <template>
-  <div class="to-do-list">
-    <AuthGuard>
+  <div class="resume-body-wrapper">
+    <Auth>
       <router-view v-if="!isReload"></router-view>
-    </AuthGuard>
+    </Auth>
   </div>
 </template>
 
@@ -13,13 +13,13 @@
 <script lang="ts">
 import { BaseVue } from "@/base/view/BaseVue";
 import Component from "vue-class-component";
-import { AuthGuard } from "@/components/AuthGuard";
+import { Authority } from "@/components/Authority";
 import { MyLogger } from "@/base/utils/MyLogger";
 import { Browser } from "@/base/utils/Browser";
 import { State } from "vuex-class";
 
 @Component({
-  components: { AuthGuard },
+  components: { Auth: Authority },
 })
 export default class App extends BaseVue {
   @State("ElementUI/isReload")

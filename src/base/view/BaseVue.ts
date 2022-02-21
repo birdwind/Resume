@@ -6,6 +6,7 @@ import { AddHistoryMessage, Reload, ShowLoading } from "@/store/types";
 import { MyLogger } from "@/base/utils/MyLogger";
 
 export class BaseVue extends Vue {
+  windowWidth = 0;
   @Action("ElementUI/reload")
   private reload!: Reload;
 

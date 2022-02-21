@@ -1,5 +1,24 @@
-.v-navigation-drawer{
-  .v-navigation-drawer__content{
+.v-application {
+  font-family: "NotoSansTC-Medium", serif;
+
+  .v-application--wrap {
+    flex-direction: unset;
+    background-color: #d76e51;
+  }
+}
+
+.v-navigation-drawer {
+  .v-navigation-drawer__content {
     width: 100%;
+  }
+}
+
+.v-app-bar {
+  margin: 0 58px;
+
+  &.v-toolbar--prominent {
+    .v-toolbar__content {
+      align-items: center;
+    }
   }
 }
