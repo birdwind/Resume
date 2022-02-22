@@ -3,7 +3,6 @@
                short
                clipped-right
                hide-on-scroll
-               flat
                prominent
                color="transparent">
         <v-row>
@@ -47,12 +46,25 @@
                     </v-tab>
                 </v-tabs>
             </v-col>
-<!--            <v-col>-->
-<!--                -->
-<!--            </v-col>-->
         </v-row>
     </v-app-bar>
-    <div class="triangle"></div>
+    <v-main>
+        <full-page ref="fullpage" :options="options" id="fullpage">
+            <div class="section">
+                <About></About>
+            </div>
+            <div class="section">
+                <Portfolio></Portfolio>
+            </div>
+            <div class="section">
+                test
+            </div>
+            <div class="section">
+               test2
+            </div>
+            <div class="section footerH"></div>
+        </full-page>
+    </v-main>
     <div class="nav nav-menu">
         <div class="nav-item" data-menuanchor="About">
             <i class="resume-icon icon-circle"></i>
@@ -71,17 +83,4 @@
             <span>聯絡我</span>
         </div>
     </div>
-    <v-main>
-        <v-container>
-            <full-page ref="fullpage" :options="options" id="fullpage">
-                <div class="section">
-                    <About></About>
-                </div>
-                <div class="section">
-                    Second section ...
-                </div>
-                <div class="section footerH"></div>
-            </full-page>
-        </v-container>
-    </v-main>
 </v-app>

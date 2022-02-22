@@ -5,6 +5,10 @@
     flex-direction: unset;
     background-color: #d76e51;
   }
+
+  .container{
+    max-width: 100%!important;
+  }
 }
 
 .v-navigation-drawer {
@@ -14,7 +18,8 @@
 }
 
 .v-app-bar {
-  margin: 0 58px;
+  padding: 0 58px;
+  opacity: .8;
 
   &.v-toolbar--prominent {
     .v-toolbar__content {

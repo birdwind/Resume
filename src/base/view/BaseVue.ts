@@ -3,18 +3,16 @@ import { MessageType } from "element-ui/types/message";
 import { NotificationPosition } from "element-ui/types/notification";
 import { Action } from "vuex-class";
 import { AddHistoryMessage, Reload, ShowLoading } from "@/store/types";
-import { MyLogger } from "@/base/utils/MyLogger";
 
 export class BaseVue extends Vue {
-  windowWidth = 0;
   @Action("ElementUI/reload")
-  private reload!: Reload;
+  public reload!: Reload;
 
   @Action(`ElementUI/addHistoryMessage`)
-  addHistoryMessage!: AddHistoryMessage;
+  public addHistoryMessage!: AddHistoryMessage;
 
   @Action(`ElementUI/showLoading`)
-  showLoading!: ShowLoading;
+  public showLoading!: ShowLoading;
 
   showInfo(msg: string, title: string = "訊息") {
     this.showMessage(msg, title, "info");

@@ -4,6 +4,17 @@
   max-width: 1150px;
   margin: 0 auto;
 
+  //.triangle {
+  //  position: absolute;
+  //  top: 0;
+  //  left: 0;
+  //  width: 0;
+  //  height: 0;
+  //  border-style: none;
+  //  border-top: 150vh solid #76856a;
+  //  border-right: 80vW solid transparent;
+  //}
+
   .business-card {
     display: flex;
     height: 415px;
@@ -102,6 +113,7 @@
       }
     }
   }
+
 
   //@media screen and (max-width: 1279px){
   //  .business-card{

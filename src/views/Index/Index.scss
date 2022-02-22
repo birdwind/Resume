@@ -1,19 +1,16 @@
+@import "src/assets/styles/setting";
+
 .index {
-  .triangle {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: none;
-    border-top: 150vh solid #76856a;
-    border-right: 80vW solid transparent;
-  }
+  overflow-x: hidden;
 
   .nav-menu {
+    display: none;
     position: fixed;
     bottom: 45px;
     left: 25px;
+    @include lg {
+      display: block;
+    }
 
     .nav-item {
       display: flex;
@@ -37,7 +34,7 @@
         color: #000;
       }
 
-      &:last-of-type{
+      &:last-of-type {
         margin-bottom: 0;
       }
     }
@@ -81,6 +78,28 @@
         letter-spacing: normal;
         color: #fff;
       }
+    }
+  }
+
+  .fullpage-wrapper {
+    .section[data-anchor="About"] {
+      background-color: #d76e51;
+
+      &::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-style: none;
+        border-top: 150vh solid #76856a;
+        border-right: 80vW solid transparent;
+      }
+    }
+
+    .section[data-anchor="Portfolio"] {
+      background-color: #FFFFFF
     }
   }
 }

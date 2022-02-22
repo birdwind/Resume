@@ -9496,13 +9496,6 @@ v-animate-css@^0.0.5:
   dependencies:
     scrollmonitor "^1.2.4"
 
-v-fullpage@^0.9.2:
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/v-fullpage/-/v-fullpage-0.9.2.tgz#756ba11fbef2131206fce74c4cde361b6e6b779b"
-  integrity sha512-ZtlsHfscR2Bz923PErPE1b/dmBhr5MW4X1L4+vkb0DtE0s7U/kpJfSPcEtapF9kwOrLEvPplFiBldXy7UOOaEg==
-  dependencies:
-    vue "^2.5.17"
-
 v8-compile-cache@^2.0.3:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/v8-compile-cache/-/v8-compile-cache-2.3.0.tgz#2de19618c66dc247dcfb6f99338035d8245a2cee"
@@ -9630,7 +9623,7 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue@^2.5.17, vue@^2.6.11:
+vue@^2.6.11:
   version "2.6.14"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.14.tgz#e51aa5250250d569a3fbad3a8a5a687d6036e235"
   integrity sha512-x2284lgYvjOMj3Za7kqzRcUSxBboHqtgRE2zlos1qWaOye5yUmHn42LB1250NJBLRwEcdrB0JRwyPTEPhfQjiQ==

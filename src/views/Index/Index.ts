@@ -1,12 +1,12 @@
 import Component from "vue-class-component";
 import { BaseVue } from "@/base/view/BaseVue";
 import About from "@/views/About/About.vue";
-import { MyLogger } from "@/base/utils/MyLogger";
-import { Watch } from "vue-property-decorator";
+import Portfolio from "@/views/Portfolio/Portfolio.vue";
 
 @Component({
   components: {
     About,
+    Portfolio,
   },
 })
 export default class Index extends BaseVue {
@@ -30,32 +30,20 @@ export default class Index extends BaseVue {
     responsiveWidth: 960,
   };
 
-  created() {
-    this.screenWidth = window.screen.width;
-    window.addEventListener("resize", this.windowResizeHandler);
-  }
-
-  destroyed() {
-    window.removeEventListener("resize", this.windowResizeHandler);
-  }
-
-  private windowResizeHandler(): void {
-    this.screenWidth = window.screen.width;
-    // MyLogger.log(window.screen.width);
-    // MyLogger.log(window.screen.height);
-  }
-
-  // @Watch("screenWidth")
-  // watchScreenWidth(val: number) {
-  //   MyLogger.log(this.$refs.fullpage.api);
-  //   if (val > 960) {
-  //     this.$refs.fullpage.api.setAllowScrolling(true);
-  //   } else {
-  //     this.$refs.fullpage.api.setAllowScrolling(false);
-  //   }
+  // created() {
+  //   this.screenWidth = window.screen.width;
+  //   window.addEventListener("resize", this.windowResizeHandler);
+  // }
+  //
+  // destroyed() {
+  //   window.removeEventListener("resize", this.windowResizeHandler);
+  // }
+  //
+  // private windowResizeHandler(): void {
+  //   this.screenWidth = window.screen.width;
   // }
 
-  afterLoadFullPage() {}
+  private afterLoadFullPage() {}
 
-  onLeaveFullPage() {}
+  private onLeaveFullPage() {}
 }

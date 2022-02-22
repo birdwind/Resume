@@ -1,9 +1,7 @@
 <template>
-  <div class="resume-body-wrapper">
-    <Auth>
-      <router-view v-if="!isReload"></router-view>
-    </Auth>
-  </div>
+  <Auth>
+    <router-view v-if="!isReload"></router-view>
+  </Auth>
 </template>
 
 <style lang="scss">
