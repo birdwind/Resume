@@ -46,6 +46,10 @@
     line-height: 0.88;
     letter-spacing: normal;
     color: #fff;
+    @include mb{
+      font-size: 20px;
+      line-height: 1;
+    }
   }
 
   .resume-tabs {
@@ -78,6 +82,17 @@
         letter-spacing: normal;
         color: #fff;
       }
+    }
+  }
+
+  .menu-button{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    button{
+      display: flex;
+      align-items: center;
     }
   }
 

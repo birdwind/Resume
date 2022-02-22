@@ -3,18 +3,16 @@
                short
                clipped-right
                hide-on-scroll
-
+               flat
+               prominent
                color="transparent">
-        <v-row>
-            <v-col cols="6"
-                   sm="6">
+        <v-row no-gutters>
+            <v-col>
                 <div class="resume-toolbar-title">
                     PHIL TSAI
                 </div>
             </v-col>
-            <v-col cols="0"
-                   md="6"
-                   class="hidden-sm-and-down">
+            <v-col class="hidden-sm-and-down">
                 <v-tabs align-with-title
                         background-color="transparent"
                         color="white"
@@ -49,12 +47,11 @@
                     </v-tab>
                 </v-tabs>
             </v-col>
-            <v-col>
+            <div class="hidden-md-and-up menu-button">
                 <button>
-                    <i></i>
+                    <i class="resume-icon icon-menu"></i>
                 </button>
-                <v-app-bar-nav-icon></v-app-bar-nav-icon>
-            </v-col>
+            </div>
         </v-row>
     </v-app-bar>
     <v-main>
