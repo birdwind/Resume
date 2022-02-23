@@ -2,15 +2,16 @@
     <v-app-bar app
                short
                clipped-right
-               hide-on-scroll
                flat
                prominent
-               color="transparent">
+               color="rgba(0, 0, 0, 0.3)">
+        <!--               hide-on-scroll>-->
         <v-row no-gutters>
-            <v-col>
-                <div class="resume-toolbar-title">
+            <v-col style="display: flex; align-items: center;">
+                <a class="resume-toolbar-title"
+                   href="/">
                     PHIL TSAI
-                </div>
+                </a>
             </v-col>
             <v-col class="hidden-sm-and-down">
                 <v-tabs align-with-title
@@ -22,28 +23,28 @@
                         v-model="currentTab"
                         class="resume-tabs nav">
                     <v-tab data-menuanchor="About">
-                        <div class="resume-tab-items">
+                        <a class="resume-tab-items" href="#About">
                             <div>關於我</div>
                             <div>ABOUT</div>
-                        </div>
+                        </a>
                     </v-tab>
                     <v-tab data-menuanchor="Portfolio">
-                        <div class="resume-tab-items">
+                        <a class="resume-tab-items" href="#Portfolio">
                             <div>作品集</div>
                             <div>PORTFOLIO</div>
-                        </div>
+                        </a>
                     </v-tab>
                     <v-tab data-menuanchor="Resume">
-                        <div class="resume-tab-items">
+                        <a class="resume-tab-items" href="#Resume">
                             <div>履歷</div>
                             <div>RESUME</div>
-                        </div>
+                        </a>
                     </v-tab>
                     <v-tab data-menuanchor="Contact">
-                        <div class="resume-tab-items">
+                        <a class="resume-tab-items" href="#Contact">
                             <div>聯絡我</div>
                             <div>CONTACT</div>
-                        </div>
+                        </a>
                     </v-tab>
                 </v-tabs>
             </v-col>
@@ -63,30 +64,38 @@
                 <Portfolio></Portfolio>
             </div>
             <div class="section">
-                test
+                <Resume></Resume>
             </div>
             <div class="section">
-               test2
+                test2
             </div>
             <div class="section footerH"></div>
         </full-page>
     </v-main>
     <div class="nav nav-menu">
-        <div class="nav-item" data-menuanchor="About">
+        <a class="nav-item"
+           href="#About"
+           data-menuanchor="About">
             <i class="resume-icon icon-circle"></i>
             <span>關於我</span>
-        </div>
-        <div class="nav-item" data-menuanchor="Portfolio">
+        </a>
+        <a class="nav-item"
+           href="#Portfolio"
+           data-menuanchor="Portfolio">
             <i class="resume-icon icon-circle"></i>
             <span>作品集</span>
-        </div>
-        <div class="nav-item" data-menuanchor="Resume">
+        </a>
+        <a class="nav-item"
+           href="#Resume"
+           data-menuanchor="Resume">
             <i class="resume-icon icon-circle"></i>
             <span>履歷</span>
-        </div>
-        <div class="nav-item" data-menuanchor="Contact">
+        </a>
+        <a class="nav-item"
+           href="#Contact"
+           data-menuanchor="Contact">
             <i class="resume-icon icon-circle"></i>
             <span>聯絡我</span>
-        </div>
+        </a>
     </div>
 </v-app>

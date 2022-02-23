@@ -1,3 +1,5 @@
+@import "setting";
+
 .v-application {
   font-family: "NotoSansTC-Medium", serif;
 
@@ -19,11 +21,18 @@
 
 .v-app-bar {
   padding: 0 5vw;
-  opacity: .8;
 
-  &.v-toolbar--prominent {
+  @include mb {
+    height: 56px!important;
+  }
+
+
+  &.v-toolbar {
     .v-toolbar__content {
       align-items: center;
+      @include mb {
+        height: 56px !important;
+      }
     }
   }
 }

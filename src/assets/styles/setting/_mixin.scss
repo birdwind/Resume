@@ -20,6 +20,12 @@
     }
 }
 
+@mixin pc {
+    @media (min-width: 959px) {
+        @content;
+    }
+}
+
 @mixin portrait {
     @media (orientation: portrait) {
         @content;

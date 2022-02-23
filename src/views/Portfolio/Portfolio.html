@@ -1,3 +1,55 @@
-<div class="portfolio"> 
-    <h1>portfolioComponent</h1>
+<div class="portfolio">
+    <div class="portfolio-header resume-header">
+        <div class="header-title">
+            <span>作品集</span>
+            <br>
+            <span>PORTFOLIO</span>
+        </div>
+        <div class="header-category">
+            <v-tabs
+                    background-color="transparent"
+                    color="#d76e51"
+                    hide-slider
+                    class="portfolio-tabs"
+                    v-model="currentTab">
+                <v-tab v-for="item in portfolioCategoryList">
+                    {{ item.name }}
+                </v-tab>
+            </v-tabs>
+        </div>
+    </div>
+    <div class="portfolio-content">
+        <div class="content-grid">
+            <div v-for="index of 6"
+                 class="portfolio-item-wrapper"
+                 :class="{none: !portfolioCategoryItemList[index]}">
+                <div v-if="portfolioCategoryItemList[index]"
+                     class="portfolio-item">
+                    <img :src="portfolioCategoryItemList[index].image">
+                    <div class="portfolio-detail">
+                        <span class="portfolio-detail-title">
+                            {{ portfolioCategoryItemList[index].name }}
+                        </span>
+                        <hr/>
+                        <div class="portfolio-detail-content">
+                            <span>{{ portfolioCategoryItemList[index].description }}</span>
+                        </div>
+                        <div class="portfolio-detail-footer">
+                            <a :href="portfolioCategoryItemList[index].link" target="_blank">
+                                <i class="resume-icon icon-arrow-circle-right"></i>
+                                <span>點我去看看</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div v-if="!portfolioCategoryItemList[index]"
+                     class="portfolio-item none hidden-sm-and-down">
+                    <img src="/images/temp2.png">
+                    <div class="portfolio-detail">
+                        <span>Coming Soon...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

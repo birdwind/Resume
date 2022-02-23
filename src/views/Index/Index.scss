@@ -41,12 +41,13 @@
   }
 
   .resume-toolbar-title {
+    margin-left: 0;
     font-size: 33px;
     font-weight: 500;
     line-height: 0.88;
     letter-spacing: normal;
     color: #fff;
-    @include mb{
+    @include mb {
       font-size: 20px;
       line-height: 1;
     }
@@ -74,6 +75,8 @@
     }
 
     .resume-tab-items {
+      display: block;
+
       div {
         margin: 0 1px 3px 2px;
         font-size: 17px;
@@ -85,18 +88,19 @@
     }
   }
 
-  .menu-button{
+  .menu-button {
     display: flex;
     align-items: center;
     margin-left: auto;
 
-    button{
+    button {
       display: flex;
       align-items: center;
     }
   }
 
   .fullpage-wrapper {
+
     .section[data-anchor="About"] {
       background-color: #d76e51;
 
@@ -114,7 +118,11 @@
     }
 
     .section[data-anchor="Portfolio"] {
-      background-color: #FFFFFF
+      background-color: #FFFFFF;
+    }
+
+    .section[data-anchor="Resume"] {
+      background-color: #e6e6e6;
     }
   }
 }

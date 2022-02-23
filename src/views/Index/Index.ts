@@ -2,18 +2,20 @@ import Component from "vue-class-component";
 import { BaseVue } from "@/base/view/BaseVue";
 import About from "@/views/About/About.vue";
 import Portfolio from "@/views/Portfolio/Portfolio.vue";
+import Resume from "@/views/Resume/Resume.vue";
 
 @Component({
   components: {
     About,
     Portfolio,
+    Resume,
   },
 })
 export default class Index extends BaseVue {
   $refs!: {
     fullpage: any;
   };
-  currentTab = 0;
+  private currentTab = 0;
   screenWidth = 0;
 
   copyRight = process.env.VUE_APP_CopyRight;

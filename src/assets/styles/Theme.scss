@@ -51,6 +51,13 @@ body {
 
 /*Pirate Custom SCSS*/
 
+a {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  text-decoration: none;
+}
+
 .resume-button {
   padding: 16px 38px 15px;
   background-color: #e6e6e6;
@@ -59,6 +66,20 @@ body {
   line-height: 1;
   letter-spacing: 2px;
   color: #000;
+}
+
+.resume-header{
+  .header-title {
+    display: block;
+    text-align: center;
+
+    span {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1;
+      color: #000000;
+    }
+  }
 }
 
 .copyrights {
