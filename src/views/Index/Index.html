@@ -3,9 +3,8 @@
                short
                clipped-right
                flat
-               prominent
-               color="rgba(0, 0, 0, 0.3)">
-        <!--               hide-on-scroll>-->
+               color="rgba(0, 0, 0, 0.3)"
+               height="75px">
         <v-row no-gutters>
             <v-col style="display: flex; align-items: center;">
                 <a class="resume-toolbar-title"
@@ -49,12 +48,49 @@
                 </v-tabs>
             </v-col>
             <div class="hidden-md-and-up menu-button">
-                <button>
+                <button @click="showMenu">
                     <i class="resume-icon icon-menu"></i>
                 </button>
             </div>
         </v-row>
     </v-app-bar>
+
+    <v-navigation-drawer v-model="isShowMenu"
+                         width="100%"
+                         fixed
+                         right
+                         app
+                         touchless
+                         color="#e6e6e6"
+                         class="resume-drawer">
+        <div class="drawer-top">
+            <button @click="showMenu(false)">
+                <i class="resume-icon icon-close_big resume-icon-50"></i>
+            </button>
+        </div>
+        <div class="drawer-list">
+            <div class="drawer-list-item">
+                <a href="#About">
+                    <span>關於我ABOUT</span>
+                </a>
+            </div>
+            <div class="drawer-list-item">
+                <a href="#Portfolio">
+                    <span>作品集PORTFOLIO</span>
+                </a>
+            </div>
+            <div class="drawer-list-item">
+                <a href="#Resume">
+                    <span>履歷RESUME</span>
+                </a>
+            </div>
+            <div class="drawer-list-item">
+                <a href="#Contact">
+                    <span>聯絡我CONTACT</span>
+                </a>
+            </div>
+        </div>
+    </v-navigation-drawer>
     <v-main>
         <full-page ref="fullpage" :options="options" id="fullpage">
             <div class="section">

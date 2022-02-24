@@ -19,6 +19,7 @@ export default class Index extends BaseVue {
   };
   protected currentTab = 0;
   protected screenWidth = 0;
+  protected isShowMenu = false;
 
   protected copyRight = process.env.VUE_APP_CopyRight;
   protected options = {
@@ -46,6 +47,10 @@ export default class Index extends BaseVue {
   // private windowResizeHandler(): void {
   //   this.screenWidth = window.screen.width;
   // }
+
+  private showMenu(isShow: boolean = true) {
+    this.isShowMenu = isShow;
+  }
 
   private afterLoadFullPage() {}
 

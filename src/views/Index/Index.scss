@@ -3,6 +3,83 @@
 .index {
   overflow-x: hidden;
 
+  .resume-toolbar-title {
+    margin-left: 0;
+    font-size: 33px;
+    font-weight: bold;
+    line-height: 0.88;
+    letter-spacing: normal;
+    color: #fff;
+    @include mb {
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    &:hover {
+      color: #e6e6e6;
+    }
+  }
+
+  .resume-tabs {
+    .v-tab {
+      &:hover {
+        a {
+          > div {
+            color: #e6e6e6;
+          }
+        }
+
+        &:before {
+          opacity: 0;
+        }
+      }
+
+      &.active {
+        a {
+          > div {
+            color: #000000;
+          }
+        }
+      }
+    }
+
+    .v-tab--active {
+      &:before {
+        opacity: 0;
+      }
+
+      &:hover {
+        &:before {
+          opacity: 0;
+        }
+      }
+    }
+
+    .resume-tab-items {
+      display: block;
+
+      div {
+        margin: 0 1px 3px 2px;
+        font-size: 17px;
+        font-weight: bold;
+        line-height: 1.35;
+        letter-spacing: normal;
+        color: #fff;
+      }
+    }
+  }
+
+  .menu-button {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    button {
+      display: flex;
+      align-items: center;
+    }
+  }
+
   .nav-menu {
     display: none;
     position: fixed;
@@ -34,77 +111,31 @@
         color: #000;
       }
 
+      &.active {
+        span {
+          color: #d76e51;
+        }
+      }
+
+      &:hover {
+        span {
+          color: rgba(215, 110, 81, 0.5);
+        }
+      }
+
       &:last-of-type {
         margin-bottom: 0;
       }
     }
   }
 
-  .resume-toolbar-title {
-    margin-left: 0;
-    font-size: 33px;
-    font-weight: 500;
-    line-height: 0.88;
-    letter-spacing: normal;
-    color: #fff;
-    @include mb {
-      font-size: 20px;
-      line-height: 1;
-    }
-  }
-
-  .resume-tabs {
-    .v-tab {
-      &:hover {
-        &:before {
-          opacity: 0;
-        }
-      }
-    }
-
-    .v-tab--active {
-      &:before {
-        opacity: 0;
-      }
-
-      &:hover {
-        &:before {
-          opacity: 0;
-        }
-      }
-    }
-
-    .resume-tab-items {
-      display: block;
-
-      div {
-        margin: 0 1px 3px 2px;
-        font-size: 17px;
-        font-weight: 500;
-        line-height: 1.35;
-        letter-spacing: normal;
-        color: #fff;
-      }
-    }
-  }
-
-  .menu-button {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-
-    button {
-      display: flex;
-      align-items: center;
-    }
-  }
-
-  .footer{
+  .footer {
     background-color: #e6e6e6;
-    .footer-wrapper{
-      margin: 0 !important;
 
-      .copyright{
+    .footer-wrapper {
+      margin: 0 auto !important;
+
+      .copyright {
         padding: 20px 0;
         font-size: 15px;
         font-weight: normal;
@@ -123,9 +154,10 @@
     ::v-deep {
       .fp-tableCell {
         > div {
+          //height: 65%;
           max-width: 1150px;
           margin: 0 auto;
-          @include mb{
+          @include mb {
             margin: 80px auto;
           }
 
@@ -175,6 +207,41 @@
         width: 50%;
         height: 100%;
         border-style: none;
+      }
+    }
+  }
+}
+
+.resume-drawer {
+  padding: 25px;
+  z-index: 999;
+
+  .drawer-top {
+    text-align: right;
+  }
+
+  .drawer-list {
+    .drawer-list-item {
+      a {
+        margin-top: 35px;
+
+        span {
+          font-size: 25px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 0.92;
+          letter-spacing: normal;
+          color: #000;
+
+          &::after{
+            content: "";
+            display: block;
+            border-bottom: solid 2px #d76e51;
+            width: 55px;
+            padding-top: 15px;
+          }
+        }
       }
     }
   }

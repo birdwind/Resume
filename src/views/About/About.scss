@@ -10,9 +10,9 @@
 
     .business-card {
       display: flex;
-      height: 415px;
+      height: 440px;
       width: 100%;
-      max-height: 415px;
+      max-height: 440px;
       margin: 0 auto;
       justify-content: center;
       @include mb{
@@ -38,22 +38,41 @@
           margin: 0 auto;
         }
 
-        .business-card-name {
-          display: flex;
-          font-size: 26px;
-          font-weight: bold;
-          line-height: 1.08;
-          letter-spacing: normal;
-          margin-top: 20px;
+        .business-card-personal {
 
-          span {
-            margin: 0 auto;
+          .business-card-name{
+            display: flex;
+            align-items: center;
+            font-size: 26px;
+            font-weight: bold;
+            line-height: 1.08;
+            letter-spacing: normal;
+            margin-top: 10px;
+
+            span {
+              margin: 0 auto;
+            }
+          }
+
+          .business-card-job{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.08;
+            letter-spacing: normal;
+          }
+
+          hr{
+            width: 30px;
+            margin: 10px auto!important;
           }
         }
 
         hr {
           border-top: 1px solid #D5D5D5;
-          margin: 15px;
+          margin: 10px;
         }
 
         .business-card-official-link {
@@ -64,6 +83,7 @@
           margin: 0 15px;
 
           .official-link-item {
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -71,6 +91,21 @@
 
             i {
               cursor: pointer;
+            }
+
+            &:hover{
+
+              .icon-facebook {
+                background-image: url("/icons/icon_facebook_active.svg");
+              }
+
+              .icon-linked{
+                background-image: url("/icons/icon_linked_active.svg");
+              }
+
+              .icon-instagram {
+                background-image: url("/icons/icon_instagram_active.svg");
+              }
             }
           }
         }
@@ -112,7 +147,21 @@
           line-height: 1.63;
           letter-spacing: normal;
           color: #fff;
-          overflow: auto;
+
+          ::-webkit-scrollbar {
+            width: 8px;
+          }
+
+          ::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.7);
+          }
+
+          >div{
+            overflow: auto;
+            height: 100%;
+          }
         }
       }
     }

@@ -22,6 +22,11 @@
     height: 42px;
   }
 
+  &.resume-icon-50 {
+    width: 50px;
+    height: 50px;
+  }
+
   &.icon-btn {
     cursor: pointer;
 
@@ -62,28 +67,32 @@
     background-image: url("/icons/icon_instagram.svg");
   }
 
-  &.icon-menu{
+  &.icon-menu {
     background-image: url("/icons/icon_menu.svg");
   }
 
-  &.icon-arrow-circle-right{
+  &.icon-arrow-circle-right {
     background-image: url("/icons/icon_arrow_circle_right.svg");
   }
 
-  &.icon-briefcase{
+  &.icon-briefcase {
     background-image: url("/icons/icon_briefcase.svg");
   }
 
-  &.icon-edu{
+  &.icon-edu {
     background-image: url("/icons/icon_edu.svg");
   }
 
-  &.icon-mail{
+  &.icon-mail {
     background-image: url("/icons/icon_mail.svg");
   }
 
-  &.icon-phone{
+  &.icon-phone {
     background-image: url("/icons/icon_phone.svg");
+  }
+
+  &.icon-close_big {
+    background-image: url("/icons/icon_close_big.svg");
   }
 
 }
