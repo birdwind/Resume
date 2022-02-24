@@ -3,23 +3,25 @@ import { BaseVue } from "@/base/view/BaseVue";
 import About from "@/views/About/About.vue";
 import Portfolio from "@/views/Portfolio/Portfolio.vue";
 import Resume from "@/views/Resume/Resume.vue";
+import Contact from "@/views/Contact/Contact.vue";
 
 @Component({
   components: {
     About,
     Portfolio,
     Resume,
+    Contact,
   },
 })
 export default class Index extends BaseVue {
   $refs!: {
     fullpage: any;
   };
-  private currentTab = 0;
-  screenWidth = 0;
+  protected currentTab = 0;
+  protected screenWidth = 0;
 
-  copyRight = process.env.VUE_APP_CopyRight;
-  options = {
+  protected copyRight = process.env.VUE_APP_CopyRight;
+  protected options = {
     verticalCentered: true, // 定義每一頁的內容是否垂直居中
     afterLoad: this.afterLoadFullPage, // 滾動到某一屏後的回調函數
     scrollOverflow: true, // 內容超過滿屏後顯示滾動條
@@ -28,7 +30,7 @@ export default class Index extends BaseVue {
     scrollBar: true, // true則是一滾動就是一整屏
     onLeave: this.onLeaveFullPage, // 滾動前的回調函數，
     menu: ".nav",
-    anchors: ["About", "Portfolio", "Resume", "Contact"],
+    anchors: ["About", "Portfolio", "Resume", "Contact", "Footer"],
     responsiveWidth: 960,
   };
 

@@ -1,118 +1,120 @@
+@import "src/assets/styles/setting";
+
 .about {
   position: relative;
-  max-width: 1150px;
-  margin: 0 auto;
 
-  .business-card {
-    display: flex;
-    height: 415px;
-    width: 100%;
-    max-height: 415px;
-    margin: 0 auto;
-    justify-content: center;
+  .about-wrapper{
+    @include mb{
+      //margin-top: 80px;
+    }
 
-    .business-card-left {
-      width: 280px;
-      height: 100%;
-      max-width: 280px;
-      max-height: 100%;
-      box-shadow: 1px 2px 15px -1px rgba(0, 0, 0, 0.3);
-      background-color: #fff;
-      padding: 25px;
-
-      .business-card-image {
-        background-image: url("/images/self.jpg");
-        width: 230px;
-        height: 260px;
-        background-position-x: -200px;
-        background-position-y: -620px;
-        margin: 0 auto;
+    .business-card {
+      display: flex;
+      height: 415px;
+      width: 100%;
+      max-height: 415px;
+      margin: 0 auto;
+      justify-content: center;
+      @include mb{
+        height: auto;
+        max-height: unset;
       }
 
-      .business-card-name {
-        display: flex;
-        font-size: 26px;
-        font-weight: bold;
-        line-height: 1.08;
-        letter-spacing: normal;
-        margin-top: 20px;
+      .business-card-left {
+        width: 280px;
+        height: 100%;
+        max-width: 280px;
+        max-height: 100%;
+        box-shadow: 1px 2px 15px -1px rgba(0, 0, 0, 0.3);
+        background-color: #fff;
+        padding: 25px;
 
-        span {
+        .business-card-image {
+          background-image: url("/images/self.jpg");
+          width: 230px;
+          height: 260px;
+          background-position-x: -200px;
+          background-position-y: -620px;
           margin: 0 auto;
         }
-      }
 
-      hr {
-        border-top: 1px solid #D5D5D5;
-        margin: 15px;
-      }
+        .business-card-name {
+          display: flex;
+          font-size: 26px;
+          font-weight: bold;
+          line-height: 1.08;
+          letter-spacing: normal;
+          margin-top: 20px;
 
-      .business-card-official-link {
-        display: flex;
-        flex: 0 1 auto;
-        align-items: center;
-        justify-content: center;
-        margin: 0 15px;
+          span {
+            margin: 0 auto;
+          }
+        }
 
-        .official-link-item {
-          width: 100%;
-          text-align: center;
+        hr {
+          border-top: 1px solid #D5D5D5;
+          margin: 15px;
+        }
 
-          i {
-            cursor: pointer;
+        .business-card-official-link {
+          display: flex;
+          flex: 0 1 auto;
+          align-items: center;
+          justify-content: center;
+          margin: 0 15px;
+
+          .official-link-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            i {
+              cursor: pointer;
+            }
           }
         }
       }
-    }
 
-    .business-card-right {
-      width: 100%;
-      margin-left: 30px;
-      padding: 25px 0;
+      .business-card-right {
+        width: 100%;
+        margin-left: 30px;
+        padding: 25px 0;
+        @include mb{
+          margin-left: 0;
+          padding: 25px 30px;
+        }
 
-      .intro-title {
-        height: 50px;
-        font-size: 42px;
-        font-weight: bold;
-        line-height: 1.14;
-        letter-spacing: normal;
-        color: #fff;
-      }
+        .intro-title {
+          height: 50px;
+          font-size: 42px;
+          font-weight: bold;
+          line-height: 1.14;
+          letter-spacing: normal;
+          color: #fff;
+        }
 
-      .intro-sub-title {
-        height: 30px;
-        font-size: 28px;
-        font-weight: normal;
-        line-height: 0.93;
-        letter-spacing: normal;
-        color: #fff;
-      }
+        .intro-sub-title {
+          height: 30px;
+          font-size: 28px;
+          font-weight: normal;
+          line-height: 0.93;
+          letter-spacing: normal;
+          color: #fff;
+        }
 
-      .intro-content {
-        height: 100%;
-        max-height: 183px;
-        margin: 25px 0;
-        font-size: 16px;
-        font-weight: normal;
-        line-height: 1.63;
-        letter-spacing: normal;
-        color: #fff;
-        overflow: auto;
+        .intro-content {
+          height: 100%;
+          max-height: 183px;
+          margin: 25px 0;
+          font-size: 16px;
+          font-weight: normal;
+          line-height: 1.63;
+          letter-spacing: normal;
+          color: #fff;
+          overflow: auto;
+        }
       }
     }
   }
-
-
-  //@media screen and (max-width: 1279px){
-  //  .business-card{
-  //    width: 100%;
-  //  }
-  //}
-  //
-  //
-  //@media screen and (min-width: 1280px){
-  //  .business-card{
-  //    max-width: 974.25px;
-  //  }
-  //}
 }

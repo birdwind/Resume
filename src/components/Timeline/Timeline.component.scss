@@ -1,9 +1,7 @@
+@import "src/assets/styles/setting";
 .timeline {
   width: 100%;
-
-  li {
-    list-style-type: none;
-  }
+  height: 100%;
 
   .timeline-item {
     position: relative;
@@ -21,7 +19,8 @@
       .timeline-item-icon {
         margin-right: 15px;
         display: inline-block;
-        position: relative;
+        position: absolute;
+        top: 40px;
 
         .icon-circle {
           position: relative;
@@ -33,12 +32,14 @@
           min-height: 8px;
           background-color: #fff;
           border: solid 1px #6d6d6d;
+          z-index: 3;
         }
 
-        .icon-briefcase {
+        .icon-content {
           position: absolute;
           top: 13px;
           left: 14px;
+          z-index: 4;
         }
       }
 
@@ -47,12 +48,55 @@
         display: inline-block;
         padding: 20px;
         background-color: #fff;
-        margin-left: 30px;
+        margin-left: 60px;
+        max-width: calc(100% - 100px);
+        min-width: calc(100% - 100px);
+        top: 40px;
+
+        .item-header {
+          .company-title {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing: normal;
+            color: #373737;
+            margin-right: 10px;
+          }
+
+          .company-name {
+            font-size: 15px;
+            font-weight: normal;
+            line-height: 1;
+            letter-spacing: normal;
+            color: #373737;
+          }
+        }
+
+        .item-date {
+          font-size: 13px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1;
+          letter-spacing: normal;
+          color: #d76e51;
+          margin-top: 12px;
+          margin-bottom: 8px;
+        }
+
+        .item-content {
+          font-size: 13px;
+          font-weight: normal;
+          line-height: 1.46;
+          letter-spacing: normal;
+          color: #373737;
+        }
       }
     }
 
     &.timeline-item-header {
       padding-bottom: 12px;
+      z-index: 99;
 
       .timeline-item-tail {
         margin-top: 5px;
@@ -60,6 +104,8 @@
 
       .timeline-item-wrapper {
         .timeline-item-icon {
+          top: 0;
+
           .icon-56 {
             top: 0;
             left: 0;
@@ -72,7 +118,7 @@
 
         .timeline-item-content {
           position: relative;
-          top: -24px;
+          top: 25px;
           display: inline-block;
           padding: 0;
           font-size: 24px;
@@ -84,10 +130,32 @@
           text-align: center;
           color: #76856a;
           background-color: transparent;
-          margin-left: 0;
+          margin-left: 75px;
+          min-width: 0;
         }
       }
 
+      & + .timeline-item {
+        margin-top: 0;
+      }
+
+    }
+
+    & + .timeline-item {
+      margin-top: 25px;
+
+      .timeline-item-tail {
+        top: -25px;
+      }
+    }
+  }
+
+  .timeline-wrapper{
+    height: 100%;
+    overflow: auto;
+    @include mb{
+      height: unset;
+      overflow: initial;
     }
   }
 }

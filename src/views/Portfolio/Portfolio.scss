@@ -1,6 +1,7 @@
 @import "src/assets/styles/setting";
 
 .portfolio {
+  padding: 0 30px;
   .portfolio-header {
     .header-category {
       margin-bottom: 32px;
@@ -31,21 +32,36 @@
 
   .portfolio-content {
     min-height: 433px;
-    max-height: 433px;
     margin: 0 24px;
-    overflow: auto;
+    @include md {
+      height: 433px;
+      max-height: 433px;
+    }
 
-    .content-grid {
-      margin: 0 120px;
-      display: grid;
-      justify-content: center;
-      grid-template-columns: repeat(auto-fit, 290px);
-      grid-gap: 13px;
-      counter-reset: list-number;
-      grid-auto-flow: row dense;
-      grid-auto-rows: 210px;
+    .portfolio-content-wrapper {
+      overflow: scroll;
+      height: 100%;
 
-      .portfolio-item-wrapper {
+      .content-grid {
+        height: fit-content;
+        margin: 0 120px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, 290px);
+        grid-gap: 13px;
+        counter-reset: list-number;
+        grid-auto-flow: row dense;
+        grid-auto-rows: 210px;
+
+        ::-webkit-scrollbar {
+          width: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+          border-radius: 4px;
+          box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+          background: rgba(0, 0, 0, 0.7);
+        }
 
         .portfolio-item {
           position: relative;
@@ -131,32 +147,18 @@
             }
           }
         }
-
-        &.none {
-          @include mb {
-            display: none;
-          }
-
-          .portfolio-item {
-            .portfolio-detail {
-              text-align: center;
-
-              &:before {
-                content: "";
-                display: inline-block;
-                width: 0;
-                height: 100%;
-                vertical-align: middle;
-              }
-
-              span {
-                display: inline-block;
-              }
-            }
-          }
-        }
       }
+    }
 
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.7);
     }
   }
 }

@@ -6,7 +6,7 @@
   .nav-menu {
     display: none;
     position: fixed;
-    bottom: 45px;
+    bottom: 65px;
     left: 25px;
     @include lg {
       display: block;
@@ -99,7 +99,44 @@
     }
   }
 
+  .footer{
+    background-color: #e6e6e6;
+    .footer-wrapper{
+
+      .copyright{
+        padding: 20px 0;
+        font-size: 15px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.4;
+        letter-spacing: normal;
+        text-align: center;
+        color: #000;
+        margin: 0 auto;
+      }
+    }
+  }
+
   .fullpage-wrapper {
+    ::v-deep {
+      .fp-tableCell {
+        > div {
+          max-width: 1150px;
+          margin: 0 auto;
+          @include mb{
+            margin: 80px auto;
+          }
+
+          @include lg {
+            max-width: 1000px;
+          }
+          @include xl {
+            max-width: calc(100% - 450px);
+          }
+        }
+      }
+    }
 
     .section[data-anchor="About"] {
       background-color: #d76e51;
@@ -123,6 +160,21 @@
 
     .section[data-anchor="Resume"] {
       background-color: #e6e6e6;
+    }
+
+    .section[data-anchor="Contact"] {
+      background-color: #d76e51;
+
+      &::before {
+        content: "";
+        background-color: #76856a;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        border-style: none;
+      }
     }
   }
 }

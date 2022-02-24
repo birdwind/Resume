@@ -7,12 +7,21 @@
         </div>
     </div>
 
-    <div class="resume-content">
-        <div class="">
-            <TimelineComponent></TimelineComponent>
+    <div class="resume-timeline">
+        <div class="resume-content-wrapper">
+            <TimelineComponent TimelineHeader="工作經歷"
+                               TimelineIcon="icon-briefcase"
+                               :Timeline="timeline"></TimelineComponent>
         </div>
-        <div class="">
-
+        <div class="resume-content-wrapper">
+            <TimelineComponent TimelineHeader="教育學歷"
+                               TimelineIcon="icon-edu"
+                               :Timeline="timeline2"></TimelineComponent>
         </div>
+    </div>
+    <div class="resume-footer">
+        <button class="resume-button">
+            下載履歷
+        </button>
     </div>
 </div>

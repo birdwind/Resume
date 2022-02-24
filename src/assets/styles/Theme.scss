@@ -24,7 +24,7 @@
   display: none;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   display: none;
 }
 
@@ -66,9 +66,12 @@ a {
   line-height: 1;
   letter-spacing: 2px;
   color: #000;
+  @include mb{
+    width: 100%;
+  }
 }
 
-.resume-header{
+.resume-header {
   .header-title {
     display: block;
     text-align: center;
@@ -82,34 +85,109 @@ a {
   }
 }
 
-.copyrights {
-  position: sticky;
-  left: 0;
-  margin-top: 24px;
-  margin-bottom: 12px;
+.resume-form {
 
-  .text {
-    border-top: 1px solid #33383c;
-    height: 20px;
-    margin: 10px auto;
-    font-family: "Robot", "NotoSansTC", "Helvetica Neue", Helvetica, Arial, "PingFang TC", "Heiti TC", "LantingHei TC", "Microsoft JhengHei", "Microsoft YaHei", "微軟正黑體", sans-serif;
-    font-size: 16px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.25;
-    letter-spacing: normal;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.2);
+  .resume-form-group {
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    padding: 0 5%;
+
+    input {
+      width: 100%;
+      height: 40px;
+      box-shadow: 0 0 15px -1px rgba(255, 255, 255, 0.5);
+      border: solid 1px #76856a;
+      background-color: #fff;
+      padding: 0 12px;
+
+      &::placeholder {
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.25;
+        letter-spacing: normal;
+        color: rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    &.form-textarea {
+      height: 100%;
+
+      textarea {
+        width: 100%;
+        height: calc(100% - 20px);
+        box-shadow: 0 0 15px -1px rgba(255, 255, 255, 0.5);
+        border: solid 1px #76856a;
+        background-color: #fff;
+        padding: 12px;
+        &::placeholder {
+          font-size: 16px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.25;
+          letter-spacing: normal;
+          color: rgba(0, 0, 0, 0.3);
+        }
+      }
+
+      .error-msg {
+        position: relative;
+        top: -7px;
+        color: #d76e51;
+      }
+    }
+
+    .error-msg {
+      color: #d76e51;
+    }
+
+    textarea:focus, input:focus {
+      outline: none;
+    }
+
+    &.resume-error{
+      textarea, input{
+        border: solid 1px #d76e51;
+      }
+    }
+
+    & + .resume-form-group {
+      margin-top: 12px;
+    }
   }
-
-  border-radius: 12px;
-  border: solid 1px rgba(255, 255, 255, 0.05);
-  background-color: #33383c;
-  box-shadow: -1px -1px 4px 0 rgba(255, 255, 255, 0.1), 1px 1px 4px 0 rgba(0, 0, 0, 0.3);
 }
 
-.divider-vertical{
+//.copyrights {
+//  position: sticky;
+//  left: 0;
+//  margin-top: 24px;
+//  margin-bottom: 12px;
+//
+//  .text {
+//    border-top: 1px solid #33383c;
+//    height: 20px;
+//    margin: 10px auto;
+//    font-family: "Robot", "NotoSansTC", "Helvetica Neue", Helvetica, Arial, "PingFang TC", "Heiti TC", "LantingHei TC", "Microsoft JhengHei", "Microsoft YaHei", "微軟正黑體", sans-serif;
+//    font-size: 16px;
+//    font-weight: normal;
+//    font-stretch: normal;
+//    font-style: normal;
+//    line-height: 1.25;
+//    letter-spacing: normal;
+//    text-align: center;
+//    color: rgba(255, 255, 255, 0.2);
+//  }
+//
+//  border-radius: 12px;
+//  border: solid 1px rgba(255, 255, 255, 0.05);
+//  background-color: #33383c;
+//  box-shadow: -1px -1px 4px 0 rgba(255, 255, 255, 0.1), 1px 1px 4px 0 rgba(0, 0, 0, 0.3);
+//}
+
+.divider-vertical {
   width: 2px;
   height: 100%;
   background-color: #fff;

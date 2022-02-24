@@ -115,7 +115,7 @@ export default class Portfolio extends BaseVue {
         this.portfolioList.push({
           id: new UUID().toString(),
           categoryId: item.id,
-          name: "這是標題5",
+          name: "123",
           description: "這是內容!",
           image: "/images/temp.jpg",
           link: "https://github.com/birdwind/",

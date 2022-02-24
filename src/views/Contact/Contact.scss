@@ -1,0 +1,155 @@
+@import "src/assets/styles/setting";
+
+.contact {
+  position: relative;
+  padding: 0 30px;
+
+  .contact-header {
+    margin-bottom: 35px;
+
+    span {
+      color: #FFFFFF;
+    }
+  }
+
+  .contact-content {
+    border: solid 2px #fff;
+
+    .contact-info {
+      display: block;
+      width: 100%;
+      @include md {
+        display: flex;
+        align-items: center;
+      }
+
+      .contact-info-item {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        @include md {
+          padding-left: 5%;
+          border-left: solid 1px #fff;
+          border-right: solid 1px #fff;
+        }
+
+        &:first-of-type {
+          border-left: 0;
+        }
+
+        &:last-of-type {
+          border-right: 0;
+        }
+
+        .contact-icon {
+          position: relative;
+          margin-right: 15px;
+
+          .icon-90 {
+            width: 90px;
+            height: 90px;
+
+            @include mb{
+              width: 56px;
+              height: 56px;
+            }
+          }
+
+          .icon-60 {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            @include mb{
+              width: 30px;
+              height: 30px;
+              top: 17px;
+              left: 17px;
+            }
+          }
+        }
+
+        span {
+          font-size: 18px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 0.92;
+          letter-spacing: normal;
+          color: #fff;
+          word-break:normal;
+          word-wrap : break-word ;
+          overflow: hidden ;
+
+          @include sm{
+            font-size: 24px;
+          }
+        }
+      }
+
+      hr {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+
+    .contact-form {
+      padding: 40px 30px;
+      background-color: #e6e6e6;
+
+      .contact-form-wrapper {
+        display: block;
+        margin-bottom: 50px;
+        @include md{
+          display: flex;
+        }
+
+        .left {
+          width: 100%;
+          margin-bottom: 12px;
+          @include md{
+            margin-bottom: 0;
+          }
+        }
+
+        .right {
+          width: 100%;
+
+          textarea{
+            height: 100px;
+            @include md{
+              height: calc(100% - 20px);
+            }
+          }
+        }
+      }
+
+      .contact-form-footer {
+        width: 100%;
+        text-align: center;
+
+        button {
+          width: 100%;
+          padding: 16px;
+          background-color: #76856a;
+          color: #FFFFFF;
+          @include md {
+            width: 600px;
+          }
+        }
+      }
+    }
+
+    button {
+      width: 100%;
+      padding: 16px;
+      background-color: #76856a;
+      color: #FFFFFF;
+      @include md {
+        width: 600px;
+      }
+    }
+  }
+}
