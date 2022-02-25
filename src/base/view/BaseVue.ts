@@ -3,6 +3,7 @@ import { MessageType } from "element-ui/types/message";
 import { NotificationPosition } from "element-ui/types/notification";
 import { Action } from "vuex-class";
 import { AddHistoryMessage, Reload, ShowLoading } from "@/store/types";
+import download from "downloadjs";
 
 export class BaseVue extends Vue {
   @Action("ElementUI/reload")
@@ -61,5 +62,9 @@ export class BaseVue extends Vue {
     if (this.$route.fullPath !== path) {
       this.$router.push(path);
     }
+  }
+
+  downloadResume() {
+    download("/resume.pdf");
   }
 }

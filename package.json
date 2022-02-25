@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "downloadjs": "^1.4.7",
     "element-ui": "^2.15.6",
     "event-hooks-webpack-plugin": "2.1.5",
     "linq": "3.2.1",

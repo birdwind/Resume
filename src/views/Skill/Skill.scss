@@ -1,3 +1,22 @@
 .skill {
 
+  .skill-area {
+    position: relative;
+    //border: solid 2px #;
+    padding: 12px;
+    border-radius: 12px;
+    background: #d76e51;
+
+    span {
+      background: transparent;
+      position: absolute;
+      padding: 6px;
+      top: -18px;
+      left: -10px;
+    }
+
+    .skill-item {
+
+    }
+  }
 }
