@@ -27,6 +27,12 @@
                             <div>ABOUT</div>
                         </a>
                     </v-tab>
+                    <v-tab data-menuanchor="Skill">
+                        <a class="resume-tab-items" href="#Skill">
+                            <div>技能</div>
+                            <div>SKILL</div>
+                        </a>
+                    </v-tab>
                     <v-tab data-menuanchor="Portfolio">
                         <a class="resume-tab-items" href="#Portfolio">
                             <div>作品集</div>
@@ -75,6 +81,11 @@
                 </a>
             </div>
             <div class="drawer-list-item">
+                <a href="#Skill">
+                    <span>技能SKILL</span>
+                </a>
+            </div>
+            <div class="drawer-list-item">
                 <a href="#Portfolio">
                     <span>作品集PORTFOLIO</span>
                 </a>
@@ -95,6 +106,9 @@
         <full-page ref="fullpage" :options="options" id="fullpage">
             <div class="section">
                 <About></About>
+            </div>
+            <div class="section">
+                <Skill></Skill>
             </div>
             <div class="section">
                 <Portfolio></Portfolio>
@@ -122,6 +136,12 @@
            data-menuanchor="About">
             <i class="resume-icon icon-circle"></i>
             <span>關於我</span>
+        </a>
+        <a class="nav-item"
+           href="#Skill"
+           data-menuanchor="Skill">
+            <i class="resume-icon icon-circle"></i>
+            <span>技能</span>
         </a>
         <a class="nav-item"
            href="#Portfolio"

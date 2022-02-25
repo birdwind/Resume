@@ -3,8 +3,8 @@
 .about {
   position: relative;
 
-  .about-wrapper{
-    @include mb{
+  .about-wrapper {
+    @include mb {
       //margin-top: 80px;
     }
 
@@ -15,7 +15,7 @@
       max-height: 440px;
       margin: 0 auto;
       justify-content: center;
-      @include mb{
+      @include mb {
         height: auto;
         max-height: unset;
       }
@@ -40,7 +40,7 @@
 
         .business-card-personal {
 
-          .business-card-name{
+          .business-card-name {
             display: flex;
             align-items: center;
             font-size: 26px;
@@ -54,7 +54,7 @@
             }
           }
 
-          .business-card-job{
+          .business-card-job {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -64,9 +64,9 @@
             letter-spacing: normal;
           }
 
-          hr{
+          hr {
             width: 30px;
-            margin: 10px auto!important;
+            margin: 10px auto !important;
           }
         }
 
@@ -93,13 +93,13 @@
               cursor: pointer;
             }
 
-            &:hover{
+            &:hover {
 
               .icon-facebook {
                 background-image: url("/icons/icon_facebook_active.svg");
               }
 
-              .icon-linked{
+              .icon-linked {
                 background-image: url("/icons/icon_linked_active.svg");
               }
 
@@ -115,7 +115,7 @@
         width: 100%;
         margin-left: 30px;
         padding: 25px 0;
-        @include mb{
+        @include mb {
           margin-left: 0;
           padding: 25px 30px;
         }
@@ -158,9 +158,15 @@
             background: rgba(0, 0, 0, 0.7);
           }
 
-          >div{
+          > div {
             overflow: auto;
             height: 100%;
+
+            span {
+              > * {
+                display: inline-block;
+              }
+            }
           }
         }
       }

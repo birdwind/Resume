@@ -4,6 +4,7 @@ import About from "@/views/About/About.vue";
 import Portfolio from "@/views/Portfolio/Portfolio.vue";
 import Resume from "@/views/Resume/Resume.vue";
 import Contact from "@/views/Contact/Contact.vue";
+import Skill from "@/views/Skill/Skill.vue";
 
 @Component({
   components: {
@@ -11,6 +12,7 @@ import Contact from "@/views/Contact/Contact.vue";
     Portfolio,
     Resume,
     Contact,
+    Skill,
   },
 })
 export default class Index extends BaseVue {
@@ -31,7 +33,7 @@ export default class Index extends BaseVue {
     scrollBar: true, // true則是一滾動就是一整屏
     onLeave: this.onLeaveFullPage, // 滾動前的回調函數，
     menu: ".nav",
-    anchors: ["About", "Portfolio", "Resume", "Contact", "Footer"],
+    anchors: ["About", "Skill", "Portfolio", "Resume", "Contact", "Footer"],
     responsiveWidth: 960,
   };
 
