@@ -1,0 +1,38 @@
+{
+  "resume": [
+    {
+      "companyName": "德霖科技有限公司",
+      "companyTitle": "軟體工程師",
+      "startDate": "2020-04",
+      "endDate": "至今",
+      "content": "1.開發各式軟體應用</br>2.維護各式軟體應用</br>(JAVA、Android、C# MVC、WPF、Vue')",
+      "icon": ""
+    },
+    {
+      "companyName": "叡揚資訊",
+      "companyTitle": "助理工程師",
+      "startDate": "2019-11",
+      "endDate": "2020-03",
+      "content": "1.開發並維護SpringBoot後端及前端KendoUI",
+      "icon": ""
+    },
+    {
+      "companyName": "BookFun365樂訂",
+      "companyTitle": "Android工程師",
+      "startDate": "2018-03",
+      "endDate": "2019-02",
+      "content": "1.重構商戶版本APP，並優化多層子列表流程</br>2.依造需求維護客戶版APP</br>",
+      "icon": ""
+    }
+  ],
+  "education": [
+    {
+      "schoolName": "銘傳大學",
+      "majoring": "資訊工程",
+      "startDate": "2014-09",
+      "endDate": "2018-06",
+      "content": "",
+      "icon": ""
+    }
+  ]
+}

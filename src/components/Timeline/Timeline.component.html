@@ -19,8 +19,8 @@
                 </div>
                 <div class="timeline-item-content">
                     <div class="item-header">
-                        <span class="company-title">{{ item.companyTitle }}</span>
-                        <span class="company-name">{{ item.companyName }}</span>
+                        <span class="company-title">{{ item.title }}</span>
+                        <span class="company-name">{{ item.subTitle }}</span>
                     </div>
                     <div class="item-date">
                         <span class="start-date">{{ item.startDate }}</span>
@@ -28,8 +28,7 @@
                         <span class="end-date">{{ item.endDate }}</span>
                     </div>
                     <div class="item-content">
-                    <span>
-                        {{ item.content }}
+                    <span v-html="item.content">
                     </span>
                     </div>
                 </div>

@@ -7,3 +7,7 @@ export type Login = (data: { account: string; password: string }) => Promise<voi
 export type ShowLoading = (isShow: boolean) => void;
 export type Reload = (isReload: boolean) => Promise<void>;
 export type AddHistoryMessage = (message: HistoryMessage) => Promise<void>;
+
+// resume模組
+export type ResumeUpdate = (data: any) => void;
+export type EducationUpdate = (data: any) => void;

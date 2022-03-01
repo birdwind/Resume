@@ -32,6 +32,7 @@ export default class Index extends BaseVue {
     loopHorizontal: true, // slide幻燈片是否循環滾動
     scrollBar: true, // true則是一滾動就是一整屏
     onLeave: this.onLeaveFullPage, // 滾動前的回調函數，
+    normalScrollElements: ".scrollable-content",
     menu: ".nav",
     anchors: ["About", "Skill", "Portfolio", "Resume", "Contact", "Footer"],
     responsiveWidth: 960,
